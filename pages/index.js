@@ -18,12 +18,90 @@ export default function Home() {
   ]
 
   const featured = [
-    { name: 'CNC Lathe', slug: 'cnc-lathe-vtu' },
-    { name: 'FDM 3D Printer', slug: 'fdm-3d-printer' },
-    { name: 'A100 AI Compute Server', slug: 'a100-ai-server' },
-    { name: 'RTX 4090 Workstation', slug: 'rtx-4090-workstation' },
-    { name: 'Total Station', slug: 'total-station' },
-    { name: 'Rainwater Harvesting System', slug: 'rainwater-harvesting-system' }
+    { 
+      name: 'CNC Lathe Machine', 
+      slug: 'cnc-lathe-vtu',
+      image: 'https://www.focus-cnc.com/web/image/product.product/20/image_1024/FBL-510-%20520-%20530-%20540-%20MC?unique=4fbd8a8'
+    },
+    { 
+      name: 'FDM 3D Printer', 
+      slug: 'fdm-3d-printer',
+      image: 'https://zbotic.in/wp-content/uploads/2025/10/t6ofhcip.png'
+    },
+    { 
+      name: 'A100 AI Compute Server', 
+      slug: 'a100-ai-server',
+      image: 'https://www.nvidia.com/content/dam/en-zz/vi_vn/Solutions/viettel-pioneers-ai-research-using-nvidia-dgx-a100-banner.jpg'
+    },
+    { 
+      name: 'RTX 4090 Workstation', 
+      slug: 'rtx-4090-workstation',
+      image: 'https://wp-cdn.pugetsystems.com/2022/08/Closeup-photo-of-1-7x-NVIDIA-GeForce-RTX-4090-in-mining-rack.png'
+    },
+    { 
+      name: 'Total Station', 
+      slug: 'total-station',
+      image: 'https://www.topconpositioning.com/content/topconpositioning/global/en/solutions/technology/infrastructure-products/robotic-total-stations/_jcr_content/root/container/container/container_677028762/image.coreimg.85.1600.jpeg/1755206312275/robotic-total-stations-web-teaser1.jpeg'
+    },
+    { 
+      name: 'Rainwater Harvesting System', 
+      slug: 'rainwater-harvesting-system',
+      image: 'https://www.svl.com/wp-content/uploads/2024/04/Wahasop-RAINWATER-HARVESTING-SYSTEMS.png'
+    }
+  ]
+
+  const instituteOfferings = [
+    {
+      title: 'CNC Lathe Machine Training',
+      description: 'Hands-on training for precision machining and manufacturing'
+    },
+    {
+      title: 'Additive Manufacturing',
+      description: '3D printing technology and rapid prototyping courses'
+    },
+    {
+      title: 'AI Computing Lab Setup',
+      description: 'A100 & RTX 4090 workstations for AI/ML research'
+    },
+    {
+      title: 'Surveying & Geomatics',
+      description: 'Total Station training for civil engineering students'
+    },
+    {
+      title: 'Sustainability Labs',
+      description: 'Rainwater harvesting and environmental engineering'
+    },
+    {
+      title: 'Industry 4.0 Training',
+      description: 'Smart manufacturing and automation programs'
+    }
+  ]
+
+  const companyOfferings = [
+    {
+      title: 'Custom Manufacturing & Prototyping',
+      description: 'Rapid prototyping and small-batch production services'
+    },
+    {
+      title: 'Production Process Automation',
+      description: 'CNC machining and automated manufacturing solutions'
+    },
+    {
+      title: 'AI/ML Compute Support',
+      description: 'GPU cloud/node support for machine learning workloads'
+    },
+    {
+      title: 'CAD/CAM Design Assistance',
+      description: 'Professional design and engineering support'
+    },
+    {
+      title: 'Product Development R&D',
+      description: 'Research and development facilities access'
+    },
+    {
+      title: 'On-site CNC Machining Support',
+      description: 'Expert technicians and equipment for your projects'
+    }
   ]
 
   return (
@@ -60,10 +138,42 @@ export default function Home() {
         <div className={styles.featuredGrid}>
           {featured.map((item) => (
             <Link href={`/equipment/${item.slug}`} key={item.slug} className={styles.featuredCard}>
-              <div className={styles.featuredImage}></div>
+              <div className={styles.featuredImage}>
+                <img src={item.image} alt={item.name} loading="lazy" />
+              </div>
               <h3>{item.name}</h3>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className={styles.offerings}>
+        <div className={styles.offeringsContainer}>
+          <div className={styles.offeringSection}>
+            <h2>For Institutes</h2>
+            <div className={styles.offeringGrid}>
+              {instituteOfferings.map((offering, index) => (
+                <div key={index} className={styles.offeringCard}>
+                  <div className={styles.offeringIcon}>🎓</div>
+                  <h3>{offering.title}</h3>
+                  <p>{offering.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.offeringSection}>
+            <h2>For Companies / MSMEs / Startups</h2>
+            <div className={styles.offeringGrid}>
+              {companyOfferings.map((offering, index) => (
+                <div key={index} className={styles.offeringCard}>
+                  <div className={styles.offeringIcon}>🏢</div>
+                  <h3>{offering.title}</h3>
+                  <p>{offering.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

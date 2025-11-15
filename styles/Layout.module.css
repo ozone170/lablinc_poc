@@ -23,9 +23,26 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: opacity 0.3s;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo img {
+  height: auto;
+  max-height: 40px;
+}
+
+.logoText {
   font-size: 1.5rem;
   font-weight: bold;
   color: #4ecca3;
+  letter-spacing: 0.5px;
 }
 
 .nav {
@@ -64,7 +81,24 @@
   margin-bottom: 2rem;
 }
 
-.footerSection h3,
+.footerLogoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.footerLogo {
+  flex-shrink: 0;
+}
+
+.footerLogoContainer h3 {
+  color: #4ecca3;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
 .footerSection h4 {
   color: #4ecca3;
   margin-bottom: 1rem;
@@ -87,4 +121,18 @@
   padding-top: 2rem;
   border-top: 1px solid #333;
   color: #888;
+}
+
+@media (max-width: 768px) {
+  .logoText {
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    max-height: 32px;
+  }
+
+  .footerLogoContainer h3 {
+    font-size: 1.1rem;
+  }
 }

@@ -1,8 +1,13 @@
 .hero {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  background: linear-gradient(rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.8)), 
+              url('https://hexagon.com/-/media/project/one-web/master-site/mi/production-software/radan_hero_marquee.jpg?h=880&iar=0&w=2560&hash=641AEB0BDCF0E29BB9D7461E42F8B0F9');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: white;
-  padding: 6rem 2rem;
+  padding: 8rem 2rem;
   text-align: center;
+  position: relative;
 }
 
 .heroContent h1 {
@@ -128,7 +133,20 @@
 .featuredImage {
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f0f0f0;
+  overflow: hidden;
+  position: relative;
+}
+
+.featuredImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.featuredCard:hover .featuredImage img {
+  transform: scale(1.05);
 }
 
 .featuredCard h3 {
@@ -178,4 +196,86 @@
 
 .cta h2 {
   margin-bottom: 2rem;
+}
+
+.offerings {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+}
+
+.offeringsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.offeringSection {
+  margin-bottom: 4rem;
+}
+
+.offeringSection:last-child {
+  margin-bottom: 0;
+}
+
+.offeringSection h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #1a1a2e;
+}
+
+.offeringGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.offeringCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.offeringCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.offeringIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.offeringCard h3 {
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.offeringCard p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+    background-attachment: scroll;
+  }
+
+  .heroContent h1 {
+    font-size: 1.8rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .offeringGrid {
+    grid-template-columns: 1fr;
+  }
 }

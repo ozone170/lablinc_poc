@@ -32,24 +32,11 @@ cd lablinc_poc
 npm install
 ```
 
-### 2. Environment Variables
+### 2. Run Development Server
 
-Create a `.env.local` file in the root directory:
+**No environment variables needed!** The contact form uses Formspree.
 
-```env
-RESEND_API_KEY=your_resend_api_key_here
-AI_GATEWAY_API_KEY=your_ai_gateway_api_key_here
-```
-
-**Important:** Never commit `.env.local` to Git. It's already in `.gitignore`.
-
-### 3. Get Resend API Key
-
-1. Sign up at [resend.com](https://resend.com)
-2. Create an API key
-3. Add it to your `.env.local` file
-
-### 4. Run Development Server
+### 3. Start the Server
 
 ```bash
 npm run dev

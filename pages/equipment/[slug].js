@@ -52,7 +52,11 @@ export default function EquipmentDetail({ equipment }) {
       <div className={styles.container}>
         <div className={styles.equipmentInfo}>
           <div className={styles.imageContainer}>
-            <div className={styles.imagePlaceholder}></div>
+            {equipment.image ? (
+              <img src={equipment.image} alt={equipment.name} className={styles.equipmentImage} />
+            ) : (
+              <div className={styles.imagePlaceholder}></div>
+            )}
           </div>
           
           <div className={styles.details}>
@@ -166,6 +170,39 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const equipment = equipmentData.find(item => item.slug === params.slug)
+
+  // Add images for equipment
+  const imageMap = {
+    'cnc-lathe-vtu': 'https://www.focus-cnc.com/web/image/product.product/20/image_1024/FBL-510-%20520-%20530-%20540-%20MC?unique=4fbd8a8',
+    'fdm-3d-printer': 'https://zbotic.in/wp-content/uploads/2025/10/t6ofhcip.png',
+    'a100-ai-server': 'https://www.nvidia.com/content/dam/en-zz/vi_vn/Solutions/viettel-pioneers-ai-research-using-nvidia-dgx-a100-banner.jpg',
+    'rtx-4090-workstation': 'https://wp-cdn.pugetsystems.com/2022/08/Closeup-photo-of-1-7x-NVIDIA-GeForce-RTX-4090-in-mining-rack.png',
+    'total-station': 'https://www.topconpositioning.com/content/topconpositioning/global/en/solutions/technology/infrastructure-products/robotic-total-stations/_jcr_content/root/container/container/container_677028762/image.coreimg.85.1600.jpeg/1755206312275/robotic-total-stations-web-teaser1.jpeg',
+    'rainwater-harvesting-system': 'https://www.svl.com/wp-content/uploads/2024/04/Wahasop-RAINWATER-HARVESTING-SYSTEMS.png',
+    'cnc-milling-machine': 'https://image.made-in-china.com/202f0j00cdFbzBsJpHoI/High-Performance-Vmc1160-10000rpm-3-4-5-Axis-CNC-Milling-Machine-CNC-Vertical-Machining-Center.webp',
+    'sla-3d-printer': 'https://develop3d.com/wp-content/uploads/2019/04/Stratasys-v650-Flex-SLA-3D-Printer-1024x576.jpg',
+    'oscilloscope-digital': 'https://www.rigolna.com/images/products/MSO5000.png',
+    'spectrum-analyzer': 'https://electronicsbuzz.in/wp-content/uploads/2025/01/imresizer-1735886248353.jpg',
+    'universal-testing-machine': 'https://www.matest.com/contents/products/h001b.jpg',
+    'hardness-tester': 'https://5.imimg.com/data5/SELLER/Default/2025/7/531717517/TN/AV/GL/5263696/metal-hardness-tester-500x500.jpg',
+    'lathe-machine-conventional': 'https://5.imimg.com/data5/SELLER/Default/2022/12/ZN/QP/PB/153029/conventional-lathe-machine.JPG',
+    'milling-machine-conventional': 'https://technologicalprocess.com/wp-content/uploads/2021/07/frezarka_wyr.jpg',
+    'rtx-3090-workstation': 'https://cdna.pcpartpicker.com/static/forever/images/userbuild/334963.247dcfb3492233a216a9a7d96bd09d85.jpg',
+    'v100-ai-server': 'https://www.servethehome.com/wp-content/uploads/2019/02/8x-NVIDIA-Tesla-V100-32GB-Server.jpg',
+    'hydraulic-press': 'https://cdn.thefabricator.com/a/stamping-101-anatomy-of-a-hydraulic-press-1634077329.jpg',
+    'function-generator': 'https://in.element14.com/productimages/large/en_GB/2469113-40.jpg',
+    'water-quality-analyzer': 'https://5.imimg.com/data5/SELLER/Default/2025/8/536066241/NE/KZ/US/223692774/water-quality-analyzer-1000x1000.jpeg',
+    'gps-surveying-equipment': 'https://www.sitechukandireland.com/content/dam/whitelabel/sitechukandireland/pages/en/products/gps/R780%20Montage.png',
+    'cnc-plasma-cutter': 'https://5.imimg.com/data5/SELLER/Default/2024/12/470436902/HE/AZ/ZP/88199447/portable-cnc-cutting-machine-1000x1000.jpg',
+    'impact-testing-machine': 'https://i.ytimg.com/vi/lrEl9Qr0jM8/maxresdefault.jpg',
+    'metal-3d-printer': 'https://i.all3dp.com/wp-content/uploads/2022/03/23141948/10-ways-to-3d-print-metal.jpg',
+    'pcb-prototyping-machine': 'https://miro.medium.com/v2/resize:fit:786/format:webp/1*kGf9-egqan4kO-1snAevXQ.jpeg',
+    'h100-ai-server': 'https://cdn.uvation.com/marketing/2025/03/AI_Server_2.jpg'
+  }
+
+  if (equipment && imageMap[params.slug]) {
+    equipment.image = imageMap[params.slug]
+  }
 
   return {
     props: {

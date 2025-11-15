@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import styles from '../styles/Layout.module.css'
 
@@ -10,7 +11,14 @@ export default function Layout({ children }) {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <Link href="/" className={styles.logo}>
-            LabLinc
+            <Image 
+              src="/logo.png" 
+              alt="LabLinc Logo" 
+              width={40} 
+              height={40}
+              priority
+            />
+            <span className={styles.logoText}>LabLinc</span>
           </Link>
           <nav className={styles.nav}>
             <Link href="/" className={router.pathname === '/' ? styles.active : ''}>
@@ -39,7 +47,16 @@ export default function Layout({ children }) {
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerSection}>
-            <h3>LabLinc</h3>
+            <div className={styles.footerLogoContainer}>
+              <Image 
+                src="/logo.png" 
+                alt="LabLinc Logo" 
+                width={32} 
+                height={32}
+                className={styles.footerLogo}
+              />
+              <h3>LabLinc</h3>
+            </div>
             <p>Bridging Academia & Industry</p>
           </div>
           <div className={styles.footerSection}>
@@ -52,6 +69,8 @@ export default function Layout({ children }) {
           <div className={styles.footerSection}>
             <h4>Contact</h4>
             <p>lablinc.global@gmail.com</p>
+            <p><a href="tel:+917353957307">+91 73539 57307</a></p>
+            <p><a href="tel:+918217076246">+91 82170 76246</a></p>
             <p>VTU, Belagavi - 590018</p>
           </div>
           <div className={styles.footerSection}>

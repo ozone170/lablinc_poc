@@ -1,0 +1,100 @@
+╔══════════════════════════════════════════════════════════════╗
+║                  LABLINC POC - QUICK START                   ║
+║                     Branch: ADITYA                           ║
+╚══════════════════════════════════════════════════════════════╝
+
+📦 STEP 1: INSTALL DEPENDENCIES
+────────────────────────────────────────────────────────────────
+cd lablinc_poc
+npm install
+
+
+🔑 STEP 2: SETUP ENVIRONMENT VARIABLES
+────────────────────────────────────────────────────────────────
+1. Copy the example file:
+   copy .env.local.example .env.local
+
+2. Get Resend API Key:
+   - Go to: https://resend.com
+   - Sign up (free)
+   - Create API key
+   - Copy the key
+
+3. Edit .env.local and add your keys:
+   RESEND_API_KEY=re_xxxxxxxxxxxxx
+   AI_GATEWAY_API_KEY=your_key_here
+
+
+🚀 STEP 3: RUN DEVELOPMENT SERVER
+────────────────────────────────────────────────────────────────
+npm run dev
+
+Then open: http://localhost:3000
+
+
+✅ STEP 4: TEST THE APPLICATION
+────────────────────────────────────────────────────────────────
+1. Browse equipment: http://localhost:3000/equipment
+2. Test contact form: http://localhost:3000/contact
+3. Check email at: lablinc.global@gmail.com
+
+
+☁️ STEP 5: DEPLOY TO VERCEL
+────────────────────────────────────────────────────────────────
+1. Push to GitHub:
+   git add .
+   git commit -m "LabLinc POC ready"
+   git push origin ADITYA
+
+2. Go to: https://vercel.com
+3. Import your repository
+4. Add environment variables:
+   - RESEND_API_KEY
+   - AI_GATEWAY_API_KEY
+5. Click Deploy!
+
+
+🐳 ALTERNATIVE: DOCKER DEPLOYMENT
+────────────────────────────────────────────────────────────────
+Option 1 - Docker Build:
+  docker build -t lablinc-poc .
+  docker run -p 3000:3000 -e RESEND_API_KEY=your_key lablinc-poc
+
+Option 2 - Docker Compose:
+  1. Create .env file with your keys
+  2. Run: docker-compose up
+
+
+📚 DOCUMENTATION
+────────────────────────────────────────────────────────────────
+- README.md                  - Main documentation
+- SETUP_GUIDE.md            - Detailed setup guide
+- DEPLOYMENT_CHECKLIST.md   - Deployment checklist
+- PROJECT_SUMMARY.md        - Project overview
+
+
+📞 SUPPORT
+────────────────────────────────────────────────────────────────
+Email: lablinc.global@gmail.com
+Instagram: @lablinc
+LinkedIn: /company/lablinc
+
+
+🎯 WHAT'S INCLUDED
+────────────────────────────────────────────────────────────────
+✅ 7 Pages (Home, Equipment, Detail, About, Partner, Contact, API)
+✅ 25 Equipment Items (10 Categories)
+✅ Email Integration (Resend API)
+✅ Docker Support
+✅ Vercel Ready
+✅ Responsive Design
+✅ Complete Documentation
+
+
+🎉 YOU'RE ALL SET!
+────────────────────────────────────────────────────────────────
+Your LabLinc POC is ready to launch! 🚀
+
+Need help? Check the documentation files or contact us.
+
+Good luck with your deployment!

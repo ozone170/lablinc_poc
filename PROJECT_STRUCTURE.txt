@@ -1,0 +1,274 @@
+LABLINC POC - PROJECT STRUCTURE
+═══════════════════════════════════════════════════════════════
+
+lablinc_poc/
+│
+├── 📁 components/
+│   └── Layout.js                    # Main layout with header/footer
+│
+├── 📁 data/
+│   └── equipment.json               # 25 equipment items
+│
+├── 📁 pages/
+│   ├── 📁 api/
+│   │   └── contact.js              # Email API endpoint (Resend)
+│   │
+│   ├── 📁 equipment/
+│   │   ├── [slug].js               # Dynamic equipment detail page
+│   │   └── index.js                # Equipment list with filters
+│   │
+│   ├── _app.js                     # Next.js app wrapper
+│   ├── _document.js                # HTML document structure
+│   ├── about.js                    # About page (team, mission)
+│   ├── contact.js                  # Contact form page
+│   ├── index.js                    # Home page (hero, categories)
+│   └── partner.js                  # Partner application page
+│
+├── 📁 styles/
+│   ├── globals.css                 # Global CSS styles
+│   ├── Layout.module.css           # Layout component styles
+│   ├── Home.module.css             # Home page styles
+│   ├── Equipment.module.css        # Equipment list styles
+│   ├── EquipmentDetail.module.css  # Equipment detail styles
+│   ├── About.module.css            # About page styles
+│   ├── Contact.module.css          # Contact page styles
+│   └── Partner.module.css          # Partner page styles
+│
+├── 📄 .env.local.example           # Environment variables template
+├── 📄 .gitignore                   # Git ignore rules
+├── 📄 docker-compose.yml           # Docker Compose configuration
+├── 📄 Dockerfile                   # Docker build instructions
+├── 📄 next.config.js               # Next.js configuration
+├── 📄 package.json                 # NPM dependencies
+├── 📄 vercel.json                  # Vercel deployment config
+│
+├── 📖 README.md                    # Main documentation
+├── 📖 SETUP_GUIDE.md               # Setup instructions
+├── 📖 DEPLOYMENT_CHECKLIST.md      # Deployment checklist
+├── 📖 PROJECT_SUMMARY.md           # Project overview
+├── 📖 PROJECT_STRUCTURE.txt        # This file
+└── 📖 QUICK_START.txt              # Quick start commands
+
+
+═══════════════════════════════════════════════════════════════
+STATISTICS
+═══════════════════════════════════════════════════════════════
+
+📊 Total Files: 30+
+📊 Total Folders: 5
+📊 Pages: 7 (Home, Equipment List, Equipment Detail, About, Partner, Contact, API)
+📊 Components: 1 (Layout)
+📊 Styles: 8 CSS modules
+📊 Data: 25 equipment items
+📊 Documentation: 6 files
+
+
+═══════════════════════════════════════════════════════════════
+KEY FILES EXPLAINED
+═══════════════════════════════════════════════════════════════
+
+🔧 CONFIGURATION FILES
+─────────────────────────────────────────────────────────────
+next.config.js          - Next.js framework settings
+package.json            - Dependencies and scripts
+vercel.json             - Vercel deployment settings
+Dockerfile              - Docker container build
+docker-compose.yml      - Multi-container Docker setup
+.gitignore              - Files to exclude from Git
+.env.local.example      - Environment variables template
+
+
+📄 PAGE FILES
+─────────────────────────────────────────────────────────────
+pages/index.js          - Home page (/)
+pages/equipment/index.js - Equipment list (/equipment)
+pages/equipment/[slug].js - Equipment detail (/equipment/[slug])
+pages/about.js          - About page (/about)
+pages/partner.js        - Partner page (/partner)
+pages/contact.js        - Contact page (/contact)
+pages/api/contact.js    - Email API (/api/contact)
+
+
+🎨 STYLE FILES
+─────────────────────────────────────────────────────────────
+styles/globals.css      - Global styles (reset, fonts)
+styles/Layout.module.css - Header, footer, navigation
+styles/Home.module.css  - Hero, categories, featured
+styles/Equipment.module.css - List, filters, cards
+styles/EquipmentDetail.module.css - Detail view, booking form
+styles/About.module.css - About page layout
+styles/Contact.module.css - Contact form layout
+styles/Partner.module.css - Partner form layout
+
+
+📊 DATA FILES
+─────────────────────────────────────────────────────────────
+data/equipment.json     - 25 equipment items with specs
+
+
+🧩 COMPONENT FILES
+─────────────────────────────────────────────────────────────
+components/Layout.js    - Reusable layout (header + footer)
+
+
+📚 DOCUMENTATION FILES
+─────────────────────────────────────────────────────────────
+README.md               - Main project documentation
+SETUP_GUIDE.md          - Step-by-step setup guide
+DEPLOYMENT_CHECKLIST.md - Pre/post deployment tasks
+PROJECT_SUMMARY.md      - Complete project overview
+PROJECT_STRUCTURE.txt   - This file (structure reference)
+QUICK_START.txt         - Quick start commands
+
+
+═══════════════════════════════════════════════════════════════
+ROUTING STRUCTURE
+═══════════════════════════════════════════════════════════════
+
+/                       → pages/index.js (Home)
+/equipment              → pages/equipment/index.js (List)
+/equipment/cnc-lathe-vtu → pages/equipment/[slug].js (Detail)
+/about                  → pages/about.js (About)
+/partner                → pages/partner.js (Partner)
+/contact                → pages/contact.js (Contact)
+/api/contact            → pages/api/contact.js (API)
+
+
+═══════════════════════════════════════════════════════════════
+DEPENDENCIES
+═══════════════════════════════════════════════════════════════
+
+Production:
+  - next@14.0.4          (Framework)
+  - react@18.2.0         (UI Library)
+  - react-dom@18.2.0     (React DOM)
+  - resend@3.0.0         (Email API)
+
+Development:
+  - eslint@8.55.0        (Code linting)
+  - eslint-config-next   (Next.js ESLint config)
+
+
+═══════════════════════════════════════════════════════════════
+ENVIRONMENT VARIABLES
+═══════════════════════════════════════════════════════════════
+
+Required:
+  RESEND_API_KEY         - Resend email API key
+  AI_GATEWAY_API_KEY     - AI Gateway API key
+
+Location:
+  Local: .env.local
+  Vercel: Dashboard → Settings → Environment Variables
+  Docker: .env file or -e flag
+
+
+═══════════════════════════════════════════════════════════════
+BUILD & DEPLOYMENT
+═══════════════════════════════════════════════════════════════
+
+Local Development:
+  npm install            - Install dependencies
+  npm run dev            - Start dev server (port 3000)
+  npm run build          - Build for production
+  npm start              - Start production server
+
+Docker:
+  docker build -t lablinc-poc .
+  docker run -p 3000:3000 lablinc-poc
+  docker-compose up
+
+Vercel:
+  1. Push to GitHub
+  2. Import to Vercel
+  3. Add environment variables
+  4. Deploy
+
+
+═══════════════════════════════════════════════════════════════
+FEATURES BY PAGE
+═══════════════════════════════════════════════════════════════
+
+🏠 HOME (/)
+  - Hero section with CTA buttons
+  - 10 equipment categories
+  - 6 featured equipment items
+  - How it works (4 steps)
+  - Final CTA section
+
+📋 EQUIPMENT LIST (/equipment)
+  - 25 equipment items
+  - Sidebar filters (category, availability, GPU, civil, environmental)
+  - Grid layout with cards
+  - Availability badges
+
+🔍 EQUIPMENT DETAIL (/equipment/[slug])
+  - Equipment image placeholder
+  - Name, category, institute
+  - Availability status
+  - Specifications list
+  - Booking request form (6 fields)
+  - Success popup
+
+ℹ️ ABOUT (/about)
+  - Who we are section
+  - Mission statement
+  - Team cards (3 members)
+
+🤝 PARTNER (/partner)
+  - Benefits grid (4 benefits)
+  - Accepted equipment types (8 types)
+  - Partner application form (5 fields)
+  - Success message
+
+📧 CONTACT (/contact)
+  - Contact form (6 fields)
+  - Equipment category dropdown
+  - Email integration
+  - Contact information sidebar
+  - Social media links
+
+
+═══════════════════════════════════════════════════════════════
+EQUIPMENT CATEGORIES (10)
+═══════════════════════════════════════════════════════════════
+
+1. CNC Machines          (3 items)
+2. 3D Printers           (3 items)
+3. Electronics           (4 items)
+4. Mechanical            (2 items)
+5. Material Testing      (3 items)
+6. GPU Workstations      (2 items)
+7. AI Servers            (3 items)
+8. Civil                 (2 items)
+9. Environmental         (2 items)
+10. Prototyping          (1 item)
+
+Total: 25 equipment items
+
+
+═══════════════════════════════════════════════════════════════
+COLOR SCHEME
+═══════════════════════════════════════════════════════════════
+
+Primary:     #4ecca3 (Teal/Green)
+Dark:        #1a1a2e (Navy)
+Background:  #f8f9fa (Light Gray)
+Text:        #333333 (Dark Gray)
+Success:     #d4edda (Light Green)
+Error:       #f8d7da (Light Red)
+
+
+═══════════════════════════════════════════════════════════════
+CONTACT INFORMATION
+═══════════════════════════════════════════════════════════════
+
+Email:       lablinc.global@gmail.com
+Address:     VTU, Jnana Sangama, Belagavi – 590018, Karnataka
+Instagram:   https://www.instagram.com/lablinc
+LinkedIn:    https://www.linkedin.com/company/lablinc
+
+
+═══════════════════════════════════════════════════════════════
+STATUS: ✅ READY FOR DEPLOYMENT
+═══════════════════════════════════════════════════════════════
