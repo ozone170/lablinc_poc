@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
@@ -5,6 +6,7 @@ import styles from '../styles/Layout.module.css'
 
 export default function Layout({ children }) {
   const router = useRouter()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <div className={styles.container}>
@@ -20,20 +22,51 @@ export default function Layout({ children }) {
             />
             <span className={styles.logoText}>LabLinc</span>
           </Link>
-          <nav className={styles.nav}>
-            <Link href="/" className={router.pathname === '/' ? styles.active : ''}>
+          
+          <button 
+            className={styles.mobileMenuButton}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={styles.hamburger}></span>
+            <span className={styles.hamburger}></span>
+            <span className={styles.hamburger}></span>
+          </button>
+
+          <nav className={`${styles.nav} ${mobileMenuOpen ? styles.navOpen : ''}`}>
+            <Link 
+              href="/" 
+              className={router.pathname === '/' ? styles.active : ''}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Home
             </Link>
-            <Link href="/equipment" className={router.pathname.startsWith('/equipment') ? styles.active : ''}>
+            <Link 
+              href="/equipment" 
+              className={router.pathname.startsWith('/equipment') ? styles.active : ''}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Equipment
             </Link>
-            <Link href="/about" className={router.pathname === '/about' ? styles.active : ''}>
+            <Link 
+              href="/about" 
+              className={router.pathname === '/about' ? styles.active : ''}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               About
             </Link>
-            <Link href="/partner" className={router.pathname === '/partner' ? styles.active : ''}>
+            <Link 
+              href="/partner" 
+              className={router.pathname === '/partner' ? styles.active : ''}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Partner
             </Link>
-            <Link href="/contact" className={router.pathname === '/contact' ? styles.active : ''}>
+            <Link 
+              href="/contact" 
+              className={router.pathname === '/contact' ? styles.active : ''}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Contact
             </Link>
           </nav>
