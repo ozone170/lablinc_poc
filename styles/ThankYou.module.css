@@ -180,16 +180,41 @@
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
   .content {
     padding: 2rem 1.5rem;
   }
 
+  .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+  }
+
   .content h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 
   .message {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .info,
+  .contact {
+    padding: 1.25rem;
+  }
+
+  .info h2,
+  .contact h3 {
+    font-size: 1.1rem;
+  }
+
+  .info li,
+  .contact p {
+    font-size: 0.9rem;
   }
 
   .actions {
@@ -199,6 +224,7 @@
   .btnPrimary,
   .btnSecondary {
     width: 100%;
+    padding: 0.875rem 1.5rem;
   }
 
   .phones {

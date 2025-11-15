@@ -72,3 +72,61 @@
 .teamCard p {
   color: #666;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .section {
+    margin-bottom: 2rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .team {
+    margin-top: 2.5rem;
+  }
+
+  .team h2 {
+    font-size: 1.5rem;
+  }
+
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .teamCard {
+    padding: 1.5rem;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .teamCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .teamCard p {
+    font-size: 0.9rem;
+  }
+}

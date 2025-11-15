@@ -151,3 +151,55 @@
   background: #f8d7da;
   color: #721c24;
 }
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .sidebar h2 {
+    font-size: 1.3rem;
+  }
+
+  .filterGroup h3 {
+    font-size: 0.85rem;
+  }
+
+  .main h1 {
+    font-size: 1.75rem;
+  }
+
+  .count {
+    font-size: 0.9rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .cardImage {
+    height: 200px;
+  }
+
+  .cardContent {
+    padding: 1.25rem;
+  }
+
+  .cardContent h3 {
+    font-size: 1.1rem;
+  }
+}

@@ -173,3 +173,75 @@
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .equipmentInfo {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .imageContainer {
+    position: static;
+  }
+
+  .imagePlaceholder,
+  .equipmentImage {
+    height: 250px;
+  }
+
+  .details h1 {
+    font-size: 1.5rem;
+  }
+
+  .category {
+    font-size: 1rem;
+  }
+
+  .specs {
+    padding: 1.25rem;
+  }
+
+  .specs h2 {
+    font-size: 1.3rem;
+  }
+
+  .specs li {
+    font-size: 0.9rem;
+  }
+
+  .bookingSection {
+    padding: 1.5rem;
+  }
+
+  .bookingSection h2 {
+    font-size: 1.3rem;
+  }
+
+  .formGroup label {
+    font-size: 0.95rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.95rem;
+  }
+
+  .submitBtn {
+    width: 100%;
+    padding: 0.875rem;
+  }
+
+  .popupContent {
+    padding: 1.5rem 2rem;
+    margin: 0 1rem;
+  }
+
+  .popupContent h3 {
+    font-size: 1.3rem;
+  }
+}

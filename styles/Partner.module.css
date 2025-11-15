@@ -143,3 +143,77 @@
   border-radius: 6px;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .benefits,
+  .equipment,
+  .formSection {
+    margin-bottom: 2.5rem;
+  }
+
+  .benefits h2,
+  .equipment h2,
+  .formSection h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefitGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .benefit {
+    padding: 1.5rem;
+  }
+
+  .benefit h3 {
+    font-size: 1.1rem;
+  }
+
+  .benefit p {
+    font-size: 0.9rem;
+  }
+
+  .equipmentList {
+    grid-template-columns: 1fr;
+  }
+
+  .equipmentItem {
+    font-size: 0.9rem;
+  }
+
+  .formSection {
+    padding: 1.5rem;
+  }
+
+  .formGroup label {
+    font-size: 0.95rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.95rem;
+  }
+
+  .submitBtn {
+    width: 100%;
+    padding: 0.875rem;
+  }
+}
