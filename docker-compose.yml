@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  lablinc:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      RESEND_API_KEY: ${RESEND_API_KEY}
+      AI_GATEWAY_API_KEY: ${AI_GATEWAY_API_KEY}

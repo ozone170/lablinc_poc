@@ -1,0 +1,327 @@
+[
+  {
+    "id": 1,
+    "slug": "cnc-lathe-vtu",
+    "name": "CNC Lathe Machine",
+    "category": "CNC Machines",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "power": "3kW",
+      "bed_length": "1500mm",
+      "spindle_speed": "4000 RPM"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "fdm-3d-printer",
+    "name": "FDM 3D Printer",
+    "category": "3D Printers",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "build_volume": "300x300x400mm",
+      "layer_resolution": "0.1mm",
+      "filament": "PLA, ABS, PETG"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "a100-ai-server",
+    "name": "A100 AI Compute Server",
+    "category": "AI Servers",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "gpu": "NVIDIA A100 80GB",
+      "ram": "512GB DDR4",
+      "storage": "4TB NVMe SSD"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "rtx-4090-workstation",
+    "name": "RTX 4090 Workstation",
+    "category": "GPU Workstations",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "gpu": "NVIDIA RTX 4090 24GB",
+      "cpu": "AMD Ryzen 9 7950X",
+      "ram": "128GB DDR5"
+    }
+  },
+  {
+    "id": 5,
+    "slug": "total-station",
+    "name": "Total Station",
+    "category": "Civil",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "accuracy": "2mm + 2ppm",
+      "range": "5000m",
+      "display": "Color touchscreen"
+    }
+  },
+  {
+    "id": 6,
+    "slug": "rainwater-harvesting-system",
+    "name": "Rainwater Harvesting System",
+    "category": "Environmental",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "capacity": "10000L",
+      "filtration": "Multi-stage",
+      "monitoring": "IoT enabled"
+    }
+  },
+  {
+    "id": 7,
+    "slug": "cnc-milling-machine",
+    "name": "CNC Milling Machine",
+    "category": "CNC Machines",
+    "institute": "VTU Belagavi",
+    "availability": "Booked",
+    "specs": {
+      "table_size": "1200x600mm",
+      "spindle_speed": "8000 RPM",
+      "axes": "3-axis"
+    }
+  },
+  {
+    "id": 8,
+    "slug": "sla-3d-printer",
+    "name": "SLA 3D Printer",
+    "category": "3D Printers",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "build_volume": "192x120x200mm",
+      "layer_resolution": "0.025mm",
+      "resin_type": "UV-curable"
+    }
+  },
+  {
+    "id": 9,
+    "slug": "oscilloscope-digital",
+    "name": "Digital Oscilloscope",
+    "category": "Electronics",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "bandwidth": "200MHz",
+      "channels": "4",
+      "sample_rate": "2GSa/s"
+    }
+  },
+  {
+    "id": 10,
+    "slug": "spectrum-analyzer",
+    "name": "Spectrum Analyzer",
+    "category": "Electronics",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "frequency_range": "9kHz - 26.5GHz",
+      "resolution": "1Hz",
+      "display": "10.4 inch touchscreen"
+    }
+  },
+  {
+    "id": 11,
+    "slug": "universal-testing-machine",
+    "name": "Universal Testing Machine",
+    "category": "Material Testing",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "capacity": "100kN",
+      "test_types": "Tension, Compression, Bending",
+      "accuracy": "±0.5%"
+    }
+  },
+  {
+    "id": 12,
+    "slug": "hardness-tester",
+    "name": "Hardness Tester",
+    "category": "Material Testing",
+    "institute": "VTU Belagavi",
+    "availability": "Booked",
+    "specs": {
+      "test_methods": "Rockwell, Brinell, Vickers",
+      "load_range": "1-187.5kgf",
+      "accuracy": "±1%"
+    }
+  },
+  {
+    "id": 13,
+    "slug": "lathe-machine-conventional",
+    "name": "Conventional Lathe Machine",
+    "category": "Mechanical",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "swing": "400mm",
+      "center_distance": "1500mm",
+      "spindle_speeds": "12 steps"
+    }
+  },
+  {
+    "id": 14,
+    "slug": "milling-machine-conventional",
+    "name": "Conventional Milling Machine",
+    "category": "Mechanical",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "table_size": "1370x305mm",
+      "spindle_taper": "ISO 40",
+      "power": "5HP"
+    }
+  },
+  {
+    "id": 15,
+    "slug": "rtx-3090-workstation",
+    "name": "RTX 3090 Workstation",
+    "category": "GPU Workstations",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "gpu": "NVIDIA RTX 3090 24GB",
+      "cpu": "Intel i9-12900K",
+      "ram": "64GB DDR4"
+    }
+  },
+  {
+    "id": 16,
+    "slug": "h100-ai-server",
+    "name": "H100 AI Compute Server",
+    "category": "AI Servers",
+    "institute": "VTU Belagavi",
+    "availability": "Booked",
+    "specs": {
+      "gpu": "NVIDIA H100 80GB",
+      "ram": "1TB DDR5",
+      "storage": "8TB NVMe SSD"
+    }
+  },
+  {
+    "id": 17,
+    "slug": "pcb-prototyping-machine",
+    "name": "PCB Prototyping Machine",
+    "category": "Electronics",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "board_size": "300x400mm",
+      "resolution": "0.1mm",
+      "layers": "Double-sided"
+    }
+  },
+  {
+    "id": 18,
+    "slug": "metal-3d-printer",
+    "name": "Metal 3D Printer",
+    "category": "3D Printers",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "build_volume": "250x250x300mm",
+      "materials": "Stainless Steel, Titanium, Aluminum",
+      "layer_thickness": "20-100μm"
+    }
+  },
+  {
+    "id": 19,
+    "slug": "impact-testing-machine",
+    "name": "Impact Testing Machine",
+    "category": "Material Testing",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "capacity": "450J",
+      "test_types": "Charpy, Izod",
+      "pendulum_angle": "150°"
+    }
+  },
+  {
+    "id": 20,
+    "slug": "cnc-plasma-cutter",
+    "name": "CNC Plasma Cutter",
+    "category": "CNC Machines",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "cutting_area": "2000x3000mm",
+      "thickness": "Up to 25mm",
+      "power": "200A"
+    }
+  },
+  {
+    "id": 21,
+    "slug": "gps-surveying-equipment",
+    "name": "GPS Surveying Equipment",
+    "category": "Civil",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "accuracy": "±5mm + 0.5ppm",
+      "channels": "220",
+      "battery_life": "8 hours"
+    }
+  },
+  {
+    "id": 22,
+    "slug": "water-quality-analyzer",
+    "name": "Water Quality Analyzer",
+    "category": "Environmental",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "parameters": "pH, TDS, Turbidity, DO",
+      "accuracy": "±2%",
+      "data_logging": "10000 readings"
+    }
+  },
+  {
+    "id": 23,
+    "slug": "function-generator",
+    "name": "Function Generator",
+    "category": "Electronics",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "frequency_range": "1μHz - 80MHz",
+      "waveforms": "Sine, Square, Triangle, Pulse",
+      "channels": "2"
+    }
+  },
+  {
+    "id": 24,
+    "slug": "hydraulic-press",
+    "name": "Hydraulic Press",
+    "category": "Mechanical",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "capacity": "200 tons",
+      "stroke": "600mm",
+      "table_size": "800x800mm"
+    }
+  },
+  {
+    "id": 25,
+    "slug": "v100-ai-server",
+    "name": "V100 AI Compute Server",
+    "category": "AI Servers",
+    "institute": "VTU Belagavi",
+    "availability": "Available",
+    "specs": {
+      "gpu": "NVIDIA V100 32GB",
+      "ram": "256GB DDR4",
+      "storage": "2TB NVMe SSD"
+    }
+  }
+]
